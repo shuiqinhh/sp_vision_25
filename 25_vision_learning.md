@@ -1,3 +1,18 @@
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']]
+  },
+  options: {
+    skipHtmlTags: ['script','noscript','style','textarea','pre']
+  }
+};
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
 # 25赛季视觉代码学习
 
 ## 1 自瞄需要实现的任务：
@@ -216,11 +231,11 @@ $\cdot$ $p_i\to$实测点$\cdot$ $\hat{p} _i\rightarrow$投影点 $\cdot$ $N\to$
   关于四元数转换成3×3旋转矩阵的公式：
   $$
   \mathcal{M}(\hat{\mathbf{v}},\theta)=
-\begin{bmatrix}
-\cos\theta+(1-\cos\theta)u_{x}^2 & (1-\cos\theta)u_{x}u_{y}-(\sin\theta)u_{z} & (1-\cos\theta)u_{x}u_{z}+(\sin\theta)u_{y} \\
-(1-\cos\theta)u_{y}u_{x}+(\sin\theta)zu_{z} & \cos\theta+(1-\cos\theta)u_{y}^2 & (1-\cos\theta)u_{y}u_{z}-(\sin\theta)u_{x} \\
-(1-\cos\theta)u_{z}u_{x}-(\sin\theta)u_{y} & (1-\cos\theta)u_{z}u_{y}+(\sin\theta)u_{x} & \cos\theta+(1-\cos\theta)u_{z}^2
-\end{bmatrix}
+   \begin{bmatrix}
+   \cos\theta+(1-\cos\theta)u_{x}^2 & (1-\cos\theta)u_{x}u_{y}-(\sin\theta)u_{z} & (1-\cos\theta)u_{x}u_{z}+(\sin\theta)u_{y} \\
+  (1-\cos\theta)u_{y}u_{x}+(\sin\theta)zu_{z} & \cos\theta+(1-\cos\theta)u_{y}^2 & (1-\cos\theta)u_{y}u_{z}-(\sin\theta)u_{x} \\
+  (1-\cos\theta)u_{z}u_{x}-(\sin\theta)u_{y} & (1-\cos\theta)u_{z}u_{y}+(\sin\theta)u_{x} & \cos\theta+(1-\cos\theta)u_{z}^2
+  \end{bmatrix}
  $$
 其中$\hat{\mathbf{v}}$为旋转中心单位向量。
 - 前备知识3：欧拉角
